@@ -35,5 +35,16 @@ fig = go.Figure(data=[go.Pie(labels=label, values=counts)])
 fig.update_layout(title_text='Number of Matches At Different Batting Positions')
 fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=30,
                   marker=dict(colors=colors, line=dict(color='black', width=3)))
+#fig.show()
+
+
+#Viktor's runs at different batting positions
+label = data["Pos"]
+counts = data["Runs"]
+colors = ['gold','lightgreen', "pink", "blue", "skyblue", "cyan", "orange"]
+
+fig = go.Figure(data=[go.Pie(labels=label, values=counts)])
+fig.update_layout(title_text='Runs By Virat Kohli At Different Batting Positions')
+fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=30,
+                  marker=dict(colors=colors, line=dict(color='black', width=3)))
 fig.show()
-uthgf
